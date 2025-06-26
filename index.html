@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +22,17 @@
     <style>
         body {
             font-family: 'Manrope', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #1e293b; /* slate-800 */
+            background-color: #f8fafc;
+            /* slate-50 */
+            color: #1e293b;
+            /* slate-800 */
         }
+
         .nav-link {
             position: relative;
             transition: color 0.3s;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -36,19 +41,25 @@
             bottom: -4px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #0ea5e9; /* sky-500 */
+            background-color: #0ea5e9;
+            /* sky-500 */
             transition: width 0.3s;
         }
-        .nav-link:hover::after, .nav-link.active::after {
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
+
         .gradient-bg {
             background-image: linear-gradient(135deg, #0ea5e9, #2563eb);
         }
+
         .section-title {
             position: relative;
             padding-bottom: 0.5rem;
         }
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -60,18 +71,24 @@
             background-color: #0ea5e9;
             border-radius: 2px;
         }
+
         .privacy-explorer {
             display: none;
         }
+
         .active-nav-policy {
-            background-color: #1e293b; /* slate-800 */
-            color: #f8fafc; /* slate-50 */
+            background-color: #1e293b;
+            /* slate-800 */
+            color: #f8fafc;
+            /* slate-50 */
         }
+
         .nav-item-policy {
             transition: background-color 0.2s, color 0.2s;
         }
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Landing Page Container -->
@@ -83,34 +100,49 @@
                     <a href="#features" class="nav-link text-slate-600 hover:text-sky-500 font-bold">Funcionalidades</a>
                     <a href="#about" class="nav-link text-slate-600 hover:text-sky-500 font-bold">Nosotros</a>
                     <a href="#news" class="nav-link text-slate-600 hover:text-sky-500 font-bold">Novedades</a>
-                    <a href="#" id="privacy-link" class="nav-link text-slate-600 hover:text-sky-500 font-bold">Política de Privacidad</a>
+                    <a href="#privacy" id="privacy-link" class="nav-link text-slate-600 hover:text-sky-500 font-bold">Política
+                        de Privacidad</a>
                 </nav>
-                <a href="https://play.google.com/apps/internaltest/4700965461302072592" class="hidden md:block bg-sky-500 text-white font-bold px-5 py-2 rounded-full hover:bg-sky-600 transition-colors">Descargar</a>
+                <a href="https://play.google.com/apps/internaltest/4700965461302072592"
+                    class="hidden md:block bg-sky-500 text-white font-bold px-5 py-2 rounded-full hover:bg-sky-600 transition-colors">Descargar</a>
                 <button id="mobile-menu-button" class="md:hidden text-slate-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
             </div>
             <div id="mobile-menu" class="hidden md:hidden bg-white">
                 <a href="#features" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Funcionalidades</a>
                 <a href="#about" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Nosotros</a>
                 <a href="#news" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Novedades</a>
-                <a href="#" id="privacy-link-mobile" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Política de Privacidad</a>
-                <div class="p-4"><a href="https://play.google.com/apps/internaltest/4700965461302072592" class="w-full text-center block bg-sky-500 text-white font-bold px-5 py-3 rounded-full hover:bg-sky-600 transition-colors">Descargar</a></div>
+                <a href="#privacy" id="privacy-link-mobile" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Política
+                    de Privacidad</a>
+                <div class="p-4"><a href="https://play.google.com/apps/internaltest/4700965461302072592"
+                        class="w-full text-center block bg-sky-500 text-white font-bold px-5 py-3 rounded-full hover:bg-sky-600 transition-colors">Descargar</a>
+                </div>
             </div>
         </header>
 
         <main>
             <section id="hero" class="pt-32 pb-20 bg-white">
                 <div class="container mx-auto px-6 text-center">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">La Herramienta de Cuadrícula Definitiva para Artistas</h1>
-                    <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-600">Transforma cualquier imagen en un lienzo preciso. Acelera tu proceso de dibujo y logra proporciones perfectas con GridSketch.</p>
-                    <a href="https://play.google.com/apps/internaltest/4700965461302072592" class="mt-8 inline-block gradient-bg text-white font-bold px-8 py-4 rounded-full text-lg hover:shadow-xl transition-shadow ">Descargar Ahora</a>
-                    <div class="mt-12 mx-auto w-full max-w-4xl h-64 md:h-96 bg-slate-200 rounded-2xl flex items-center justify-center">
-                         <img src="./imagen_gridsketch.png">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">La Herramienta de
+                        Cuadrícula Definitiva para Artistas</h1>
+                    <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-600">Transforma cualquier imagen en
+                        un lienzo preciso. Acelera tu proceso de dibujo y logra proporciones perfectas con GridSketch.
+                    </p>
+                    <a href="https://play.google.com/apps/internaltest/4700965461302072592"
+                        class="mt-8 inline-block gradient-bg text-white font-bold px-8 py-4 rounded-full text-lg hover:shadow-xl transition-shadow ">Descargar
+                        Ahora</a>
+                    <div
+                        class="mt-12 mx-auto w-full max-w-xl h-[32rem] bg-slate-800 rounded-[2.5rem] border-[14px] border-slate-800 shadow-2xl overflow-hidden">
+                        <img src="./imagen_gridsketch.png" alt="Maqueta de la App GridSketch" class="w-full h-full object-cover">
                     </div>
                 </div>
             </section>
-            
+
             <section id="features" class="py-20">
                 <div class="container mx-auto px-6">
                     <h2 class="section-title text-3xl font-extrabold text-center mb-12">Funcionalidades Principales</h2>
@@ -118,49 +150,60 @@
                         <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
                             <div class="text-4xl mb-4">📐</div>
                             <h3 class="text-xl font-bold mb-2">Cuadrícula Personalizable</h3>
-                            <p class="text-slate-600">Ajusta el tamaño, color y opacidad de la cuadrícula en milímetros para una escala real y visibilidad perfecta.</p>
+                            <p class="text-slate-600">Ajusta el tamaño, color y opacidad de la cuadrícula en milímetros
+                                para una escala real y visibilidad perfecta.</p>
                         </div>
                         <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
-                             <div class="text-4xl mb-4">🖼️</div>
+                            <div class="text-4xl mb-4">🖼️</div>
                             <h3 class="text-xl font-bold mb-2">Importación Fácil</h3>
-                            <p class="text-slate-600">Selecciona cualquier imagen desde la galería de tu dispositivo y empieza a trabajar en segundos.</p>
+                            <p class="text-slate-600">Selecciona cualquier imagen desde la galería de tu dispositivo y
+                                empieza a trabajar en segundos.</p>
                         </div>
                         <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
-                             <div class="text-4xl mb-4">💾</div>
+                            <div class="text-4xl mb-4">💾</div>
                             <h3 class="text-xl font-bold mb-2">Exportación Flexible</h3>
-                            <p class="text-slate-600">Guarda tu obra en JPEG o PNG (función Pro) para compartirla o seguir trabajando en ella.</p>
+                            <p class="text-slate-600">Guarda tu obra en JPEG o PNG (función Pro) para compartirla o
+                                seguir trabajando en ella.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <section id="about" class="py-20 bg-white">
                 <div class="container mx-auto px-6 text-center max-w-4xl">
                     <h2 class="section-title text-3xl font-extrabold mb-8">Sobre Nosotros</h2>
-                    <p class="text-lg text-slate-600 leading-relaxed">Somos un pequeño equipo de desarrollo apasionado por crear herramientas que resuelvan problemas reales. GridSketch nació de nuestra propia necesidad como artistas de tener una forma rápida y fiable de aplicar el método de la cuadrícula sin complicaciones. Creemos en el software sencillo, potente y respetuoso con la privacidad del usuario.</p>
+                    <p class="text-lg text-slate-600 leading-relaxed">Somos un pequeño equipo de desarrollo apasionado
+                        por crear herramientas que resuelvan problemas reales. GridSketch nació de nuestra propia
+                        necesidad como artistas de tener una forma rápida y fiable de aplicar el método de la cuadrícula
+                        sin complicaciones. Creemos en el software sencillo, potente y respetuoso con la privacidad del
+                        usuario.</p>
                 </div>
             </section>
-            
+
             <section id="news" class="py-20">
                 <div class="container mx-auto px-6 text-center max-w-4xl">
-                     <h2 class="section-title text-3xl font-extrabold mb-8">Novedades</h2>
-                     <p class="text-lg text-slate-600 leading-relaxed">¡Estamos emocionados por el lanzamiento de GridSketch! Actualmente estamos trabajando en nuevas funciones Pro, como estilos de línea avanzados y cuadrículas isométricas. ¡Mantente atento a las próximas actualizaciones!</p>
+                    <h2 class="section-title text-3xl font-extrabold mb-8">Novedades</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">¡Estamos emocionados por el lanzamiento de
+                        GridSketch! Actualmente estamos trabajando en nuevas funciones Pro, como estilos de línea
+                        avanzados y cuadrículas isométricas. ¡Mantente atento a las próximas actualizaciones!</p>
                 </div>
             </section>
 
             <section id="download" class="py-20 gradient-bg">
-                 <div class="container mx-auto px-6 text-center">
+                <div class="container mx-auto px-6 text-center">
                     <h2 class="text-4xl font-extrabold text-white">¿Listo para Empezar?</h2>
-                    <p class="mt-4 text-lg text-white/80 max-w-2xl mx-auto">Descarga GridSketch desde la Google Play Store y lleva tus creaciones al siguiente nivel.</p>
-                    <a href="#" class="mt-8 inline-block bg-white text-sky-600 font-bold px-8 py-4 rounded-full text-lg hover:shadow-xl hover:scale-105 transition-all">
+                    <p class="mt-4 text-lg text-white/80 max-w-2xl mx-auto">Descarga GridSketch desde la Google Play
+                        Store y lleva tus creaciones al siguiente nivel.</p>
+                    <a href="https://play.google.com/apps/internaltest/4700965461302072592"
+                        class="mt-8 inline-block bg-white text-sky-600 font-bold px-8 py-4 rounded-full text-lg hover:shadow-xl hover:scale-105 transition-all">
                         Disponible en Google Play
                     </a>
-                 </div>
+                </div>
             </section>
         </main>
-        
+
         <footer class="text-center py-8 bg-slate-800 text-slate-400">
-             <p>&copy; 2025 GridSketch. Todos los derechos reservados.</p>
+            <p>&copy; 2025 GridSketch. Todos los derechos reservados.</p>
         </footer>
     </div>
 
@@ -173,9 +216,6 @@
     <script>
         const landingPage = document.getElementById('landing-page');
         const privacyExplorerContainer = document.getElementById('privacy-explorer');
-        const privacyLink = document.getElementById('privacy-link');
-        const privacyLinkMobile = document.getElementById('privacy-link-mobile');
-
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -187,7 +227,7 @@
             <div class="min-h-screen container mx-auto p-4 sm:p-6 lg:p-8">
                 <header class="flex flex-col sm:flex-row justify-between items-center mb-8 pb-4 border-b border-slate-300">
                     <div class="flex items-center space-x-4">
-                         <button id="back-to-landing" class="text-slate-600 hover:text-sky-500 font-bold">← Volver</button>
+                         <a href="#" id="back-to-landing" class="text-slate-600 hover:text-sky-500 font-bold">← Volver</a>
                          <h1 id="main-title-policy" class="text-2xl font-extrabold text-slate-900"></h1>
                     </div>
                     <div class="flex items-center space-x-1 p-1 bg-slate-200 rounded-full mt-4 sm:mt-0">
@@ -216,28 +256,45 @@
             initializePrivacyPolicyExplorer();
             window.scrollTo(0, 0);
         }
-        
+
         function showLandingPage() {
             privacyExplorerContainer.style.display = 'none';
             landingPage.style.display = 'block';
             privacyExplorerContainer.innerHTML = '';
         }
+        
+        // --- LÓGICA DE RUTAS MODIFICADA ---
+        function handleRouting() {
+            if (window.location.hash === '#privacy') {
+                showPrivacyPolicy();
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            } else {
+                showLandingPage();
+            }
+        }
+        
+        // Asignar los event listeners a los enlaces de la política
+        document.getElementById('privacy-link').addEventListener('click', (e) => {
+             e.preventDefault();
+             window.location.hash = 'privacy';
+        });
 
-        privacyLink.addEventListener('click', (e) => {
+        document.getElementById('privacy-link-mobile').addEventListener('click', (e) => {
             e.preventDefault();
-            showPrivacyPolicy();
+            window.location.hash = 'privacy';
         });
         
-        privacyLinkMobile.addEventListener('click', (e) => {
-            e.preventDefault();
-            mobileMenu.classList.add('hidden');
-            showPrivacyPolicy();
-        });
+        // Escuchar cambios en el hash y cargar la página
+        window.addEventListener('hashchange', handleRouting);
+        window.addEventListener('DOMContentLoaded', handleRouting);
+
 
         function initializePrivacyPolicyExplorer() {
              document.getElementById('back-to-landing').addEventListener('click', (e) => {
                 e.preventDefault();
-                showLandingPage();
+                window.location.hash = ''; // Limpia el hash para volver
             });
             const content = {
                 es: {
@@ -290,7 +347,7 @@
                 const langContent = content[currentLang];
                 mainTitle.textContent = langContent.title;
                 footerText.textContent = langContent.footer;
-                
+
                 navContainer.innerHTML = '';
                 Object.keys(langContent.nav).forEach(key => {
                     const li = document.createElement('li');
@@ -322,4 +379,5 @@
         }
     </script>
 </body>
+
 </html>
